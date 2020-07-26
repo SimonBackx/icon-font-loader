@@ -84,7 +84,11 @@ Our loader works in a way different to others:
 ## Install
 
 ``` shell
-npm install --save-dev icon-font-loader
+yarn add @simonbackx/icon-font-loader --dev
+```
+
+``` shell
+npm install --save-dev @simonbackx/icon-font-loader
 ```
 
 ## Config
