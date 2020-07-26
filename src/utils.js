@@ -10,8 +10,8 @@ utils.createFontFace = function createFontFace(font, dataURL) {
     } else {
         Object.keys(font).forEach((type) => {
             const url = font[type].url;
-            if (type === 'eot')
-                src.push(`url('${url}#iefix') format('embedded-opentype')`);
+            if (type === 'woff2')
+                src.push(`url('${url}') format('woff2')`);
             else if (type === 'woff')
                 src.push(`url('${url}') format('woff')`);
             else if (type === 'ttf')

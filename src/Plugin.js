@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const webfontsGenerator = require('@vusion/webfonts-generator');
+const webfontsGenerator = require('@simonbackx/webfonts-generator');
 const utils = require('./utils');
 const { BasePlugin } = require('base-css-image-loader');
 const meta = require('./meta');
@@ -20,7 +20,7 @@ class IconFontPlugin extends BasePlugin {
             // @inherit: publicPath: undefined,
             property: 'icon-font',
             fontName: 'icon-font',
-            types: ['ttf', 'eot', 'woff', 'svg'], // @bug: webfonts-generator
+            types: ['ttf', 'woff2', 'woff', 'svg'], // @bug: webfonts-generator
             localCSSTemplate: fs.readFileSync(path.resolve(__dirname, 'local.css.hbs'), 'utf8'),
             localCSSSelector: '',
             smartSelector: false, // experimental

@@ -23,10 +23,10 @@ describe('Webpack Integration Tests: entries', () => {
         execa(buildCLI, ['--config', './webpack.config.string.js']).then((res) => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
                 'main.js',
             ]);
             done();
@@ -36,10 +36,10 @@ describe('Webpack Integration Tests: entries', () => {
         execa(buildCLI, ['--config', './webpack.config.array.js']).then((res) => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
                 'main.js',
             ]);
             done();
@@ -49,10 +49,10 @@ describe('Webpack Integration Tests: entries', () => {
         execa(buildCLI, ['--config', './webpack.config.function.js']).then((res) => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
                 'main.js',
             ]);
             done();
@@ -62,10 +62,10 @@ describe('Webpack Integration Tests: entries', () => {
         execa(buildCLI, ['--config', './webpack.config.function.array.js']).then((res) => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
                 'main.js',
             ]);
             done();
@@ -76,10 +76,10 @@ describe('Webpack Integration Tests: entries', () => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
                 'bundle.js',
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
             ]);
             done();
         });
@@ -89,10 +89,10 @@ describe('Webpack Integration Tests: entries', () => {
             const files = fs.readdirSync(path.resolve(__dirname, outputDirectory));
             expect(files).to.eql([
                 'bundle.js',
-                'icon-font.eot',
                 'icon-font.svg',
                 'icon-font.ttf',
                 'icon-font.woff',
+                'icon-font.woff2',
             ]);
             done();
         });
